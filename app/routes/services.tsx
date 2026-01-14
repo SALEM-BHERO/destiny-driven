@@ -2,7 +2,7 @@ import type { Route } from "./+types/services";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ }: Route.MetaArgs) {
   return [
     { title: "Our Services - Destiny Driven Finance" },
     { name: "description", content: "Comprehensive lending solutions and financial advisory services including business loans, salary-based loans, and more." },
@@ -13,7 +13,7 @@ export default function Services() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      
+
       <main className="flex-grow">
         {/* Hero Section */}
         <section className="bg-slate-800 text-white py-16">
@@ -38,6 +38,29 @@ export default function Services() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Tobacco Farmers Loans - Featured */}
+              <div className="bg-white rounded-lg shadow-lg p-6 border-2 border-green-500 hover:shadow-xl transition-shadow duration-300 relative overflow-hidden">
+                <div className="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                  FEATURED
+                </div>
+                <div className="text-center mb-4">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-3xl text-green-600">🌿</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-800">Tobacco Farmers Loans</h3>
+                  <p className="text-green-600 font-medium">Innovative Solutions For Modern Farming</p>
+                </div>
+                <ul className="text-gray-600 space-y-2 mb-6">
+                  <li>• Crop cultivation loans</li>
+                  <li>• Equipment purchase</li>
+                  <li>• Funeral cash plan included</li>
+                  <li>• Expert agricultural advice</li>
+                </ul>
+                <a href="/contact" className="block w-full bg-green-600 text-white text-center py-2 rounded-lg hover:bg-green-700 transition-colors duration-200">
+                  Apply Now
+                </a>
+              </div>
+
               {/* Business Loans */}
               <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
                 <div className="text-center mb-4">
@@ -215,7 +238,7 @@ export default function Services() {
                   <h3 className="text-2xl font-bold text-white">Financial Advisory Services</h3>
                   <p className="text-green-400 font-medium">Expert Guidance for Wealth Building</p>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                   <ul className="text-gray-100 space-y-2">
                     <li>• Personal financial planning</li>
@@ -230,7 +253,7 @@ export default function Services() {
                     <li>• Wealth preservation strategies</li>
                   </ul>
                 </div>
-                
+
                 <a href="/contact" className="block w-full bg-green-500 text-white text-center py-3 rounded-lg hover:bg-green-600 transition-colors duration-200 font-medium">
                   Schedule Consultation
                 </a>
@@ -287,14 +310,14 @@ export default function Services() {
               Choose the financial product that's right for you and take the first step towards building wealth for generations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact" 
+              <a
+                href="/contact"
                 className="bg-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors duration-200"
               >
                 Apply for a Loan
               </a>
-              <a 
-                href="tel:0714635258" 
+              <a
+                href="tel:0714635258"
                 className="border-2 border-green-500 text-green-500 px-8 py-3 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-colors duration-200"
               >
                 Call Now: 0714635258
