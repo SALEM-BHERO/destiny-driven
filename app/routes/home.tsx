@@ -255,11 +255,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-12 text-center">
-              <p className="text-2xl font-bold text-emerald-700 italic">
-                "Ne Destiny Driven Finance, Kurima Fodya Kurima Mari!"
-              </p>
-            </div>
+
           </div>
         </section>
 
