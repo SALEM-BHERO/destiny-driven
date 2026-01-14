@@ -139,7 +139,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <h5 className="font-bold mb-6 text-white text-center md:text-left">Our Branch Network</h5>
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-            {['Harare', 'Bindura (Head Office)', 'Centenary', 'Muzarabani', 'Guruve'].map((branch) => (
+            {['Harare', 'Bindura (Head Office)', 'Centenary', 'Muzarabani', 'Guruve', 'Domboshava'].map((branch) => (
               <span key={branch} className="flex items-center bg-gray-800 px-4 py-2 rounded-lg text-sm text-gray-300 hover:bg-gray-700 transition-colors border border-gray-700">
                 <svg className="w-4 h-4 mr-2 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                 {branch}

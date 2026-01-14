@@ -329,11 +329,12 @@ export default function Contact() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { name: "Harare Branch", status: "Coming Soon" },
+                { name: "Harare Branch", status: "Open" },
                 { name: "Bindura Branch", status: "Head Office", isHeadOffice: true },
                 { name: "Centenary Branch", status: "Open" },
                 { name: "Muzarabani Branch", status: "Open" },
-                { name: "Guruve Branch", status: "Open" }
+                { name: "Guruve Branch", status: "Open" },
+                { name: "Domboshava Branch", status: "Open" }
               ].map((branch, index) => (
                 <div key={index} className={`p-8 rounded-2xl border transition-all duration-300 hover:shadow-lg ${branch.isHeadOffice
                   ? 'bg-orange-50 border-orange-200'
@@ -352,11 +353,6 @@ export default function Contact() {
                     {branch.isHeadOffice && (
                       <p className="text-sm text-gray-600 mt-4 leading-relaxed">767 York Street, Zimta House</p>
                     )}
-                    <div className="mt-6 flex justify-center space-x-4">
-                      <span className="text-sm text-gray-500 hover:text-orange-500 cursor-pointer">📞 Call</span>
-                      <span className="text-sm text-gray-200">|</span>
-                      <span className="text-sm text-gray-500 hover:text-orange-500 cursor-pointer">📍 Map</span>
-                    </div>
                   </div>
                 </div>
               ))}
