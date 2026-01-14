@@ -20,8 +20,8 @@ export default function Header() {
                 />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-slate-900">Destiny Driven Finance</h1>
-                <p className="text-xs text-amber-600 font-medium">Building Wealth For Generations</p>
+                <h1 className="text-xl font-bold text-slate-800">Destiny Driven Finance</h1>
+                <p className="text-xs text-orange-600 font-medium">Building Wealth For Generations</p>
               </div>
             </Link>
           </div>
@@ -30,25 +30,25 @@ export default function Header() {
           <nav className="hidden md:flex space-x-8">
             <Link
               to="/"
-              className="text-slate-700 hover:text-amber-600 font-medium transition-colors duration-200"
+              className="text-slate-700 hover:text-orange-600 font-medium transition-colors duration-200"
             >
               Home
             </Link>
             <Link
               to="/about"
-              className="text-slate-700 hover:text-amber-600 font-medium transition-colors duration-200"
+              className="text-slate-700 hover:text-orange-600 font-medium transition-colors duration-200"
             >
               About
             </Link>
             <Link
               to="/services"
-              className="text-slate-700 hover:text-amber-600 font-medium transition-colors duration-200"
+              className="text-slate-700 hover:text-orange-600 font-medium transition-colors duration-200"
             >
               Services
             </Link>
             <Link
               to="/contact"
-              className="text-slate-700 hover:text-amber-600 font-medium transition-colors duration-200"
+              className="text-slate-700 hover:text-orange-600 font-medium transition-colors duration-200"
             >
               Contact
             </Link>
@@ -58,13 +58,13 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-4">
             <div className="text-right">
               <p className="text-sm text-slate-600">Call us now</p>
-              <a href="tel:0714635258" className="text-amber-600 font-semibold hover:text-amber-700">
+              <a href="tel:0714635258" className="text-orange-600 font-semibold hover:text-orange-700">
                 0714635258
               </a>
             </div>
             <Link
               to="/contact"
-              className="bg-slate-900 text-white px-6 py-2 rounded-lg hover:bg-slate-800 transition-colors duration-200 font-medium"
+              className="bg-slate-800 text-white px-6 py-2 rounded-lg hover:bg-slate-700 transition-colors duration-200 font-medium"
             >
               Apply Now
             </Link>
@@ -106,40 +106,40 @@ export default function Header() {
             <nav className="flex flex-col space-y-4">
               <Link
                 to="/"
-                className="text-slate-700 hover:text-amber-600 font-medium transition-colors duration-200 py-2"
+                className="text-slate-700 hover:text-orange-600 font-medium transition-colors duration-200 py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 to="/about"
-                className="text-slate-700 hover:text-amber-600 font-medium transition-colors duration-200 py-2"
+                className="text-slate-700 hover:text-orange-600 font-medium transition-colors duration-200 py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
               <Link
                 to="/services"
-                className="text-slate-700 hover:text-amber-600 font-medium transition-colors duration-200 py-2"
+                className="text-slate-700 hover:text-orange-600 font-medium transition-colors duration-200 py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Services
               </Link>
               <Link
                 to="/contact"
-                className="text-slate-700 hover:text-amber-600 font-medium transition-colors duration-200 py-2"
+                className="text-slate-700 hover:text-orange-600 font-medium transition-colors duration-200 py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
               </Link>
               <div className="pt-4 border-t border-gray-200">
                 <p className="text-sm text-slate-600 mb-2">Call us now</p>
-                <a href="tel:0714635258" className="text-amber-600 font-semibold hover:text-amber-700 block mb-4">
+                <a href="tel:0714635258" className="text-orange-600 font-semibold hover:text-orange-700 block mb-4">
                   0714635258
                 </a>
                 <Link
                   to="/contact"
-                  className="bg-slate-900 text-white px-6 py-3 rounded-lg hover:bg-slate-800 transition-colors duration-200 font-medium inline-block text-center w-full"
+                  className="bg-slate-800 text-white px-6 py-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 font-medium inline-block text-center w-full"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Apply Now
