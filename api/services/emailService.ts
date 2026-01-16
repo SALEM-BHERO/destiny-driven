@@ -6,7 +6,7 @@ const createTransporter = () => {
   // For development, we'll use Ethereal.email to simulate email sending
   // In production, you would use real SMTP credentials
   const isGmail = process.env.EMAIL_HOST === 'smtp.gmail.com';
-  
+
   return nodemailer.createTransport({
     host: process.env.EMAIL_HOST || 'smtp.ethereal.email',
     port: parseInt(process.env.EMAIL_PORT || '587'),
@@ -27,7 +27,7 @@ export const sendLoanApplicationConfirmation = async (
 ): Promise<boolean> => {
   try {
     const transporter = createTransporter();
-    
+
     const mailOptions = {
       from: `"Destiny Driven Finance" <${process.env.EMAIL_FROM || 'noreply@destinydrivenfinance.com'}>`,
       to: applicantEmail,
@@ -39,7 +39,7 @@ Thank you for submitting your loan application with Destiny Driven Finance. We h
 
 Application ID: ${applicationId}
 
-Our team will review your application and contact you within 24-48 hours. If you have any questions, please feel free to contact us at 0714635258 or destinydrivenf@gmail.com.
+Our team will review your application and contact you within 24-48 hours. If you have any questions, please feel free to contact us at 0786573967 / 0714635258 or destinydrivenf@gmail.com.
 
 Best regards,
 The Destiny Driven Finance Team
@@ -71,7 +71,7 @@ The Destiny Driven Finance Team
         <p><strong>Application ID:</strong> ${applicationId}</p>
       </div>
       
-      <p>Our team will review your application and contact you within 24-48 hours. If you have any questions, please feel free to contact us at <a href="tel:0714635258" style="color: #3182CE;">0714635258</a> or <a href="mailto:destinydrivenf@gmail.com" style="color: #3182CE;">destinydrivenf@gmail.com</a>.</p>
+      <p>Our team will review your application and contact you within 24-48 hours. If you have any questions, please feel free to contact us at <a href="tel:+263786573967" style="color: #3182CE;">0786573967</a> / <a href="tel:+263714635258" style="color: #3182CE;">0714635258</a> or <a href="mailto:destinydrivenf@gmail.com" style="color: #3182CE;">destinydrivenf@gmail.com</a>.</p>
       
       <p>Best regards,<br>
       <strong>The Destiny Driven Finance Team</strong></p>
@@ -102,7 +102,7 @@ export const sendContactConfirmation = async (
 ): Promise<boolean> => {
   try {
     const transporter = createTransporter();
-    
+
     const mailOptions = {
       from: `"Destiny Driven Finance" <${process.env.EMAIL_FROM || 'noreply@destinydrivenfinance.com'}>`,
       to: senderEmail,
@@ -112,7 +112,7 @@ Dear ${senderName},
 
 Thank you for contacting Destiny Driven Finance. We have received your message and our team will get back to you as soon as possible.
 
-If your inquiry is urgent, please feel free to contact us directly at 0714635258 or destinydrivenf@gmail.com.
+If your inquiry is urgent, please feel free to contact us directly at 0786573967 / 0714635258 or destinydrivenf@gmail.com.
 
 Best regards,
 The Destiny Driven Finance Team
@@ -140,7 +140,7 @@ The Destiny Driven Finance Team
       
       <p>Thank you for contacting Destiny Driven Finance. We have received your message and our team will get back to you as soon as possible.</p>
       
-      <p>If your inquiry is urgent, please feel free to contact us directly at <a href="tel:0714635258" style="color: #3182CE;">0714635258</a> or <a href="mailto:destinydrivenf@gmail.com" style="color: #3182CE;">destinydrivenf@gmail.com</a>.</p>
+      <p>If your inquiry is urgent, please feel free to contact us directly at <a href="tel:+263786573967" style="color: #3182CE;">0786573967</a> / <a href="tel:+263714635258" style="color: #3182CE;">0714635258</a> or <a href="mailto:destinydrivenf@gmail.com" style="color: #3182CE;">destinydrivenf@gmail.com</a>.</p>
       
       <p>Best regards,<br>
       <strong>The Destiny Driven Finance Team</strong></p>
@@ -173,7 +173,7 @@ export const sendAdminLoanNotification = async (
 ): Promise<boolean> => {
   try {
     const transporter = createTransporter();
-    
+
     const mailOptions = {
       from: `"Destiny Driven Finance" <${process.env.EMAIL_FROM || 'noreply@destinydrivenfinance.com'}>`,
       to: adminEmail,
@@ -207,7 +207,7 @@ export const sendAdminContactNotification = async (
 ): Promise<boolean> => {
   try {
     const transporter = createTransporter();
-    
+
     const mailOptions = {
       from: `"Destiny Driven Finance" <${process.env.EMAIL_FROM || 'noreply@destinydrivenfinance.com'}>`,
       to: adminEmail,

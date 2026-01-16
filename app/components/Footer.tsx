@@ -98,7 +98,7 @@ export default function Footer() {
               <div className="text-gray-400 text-sm space-y-3 pl-7">
                 <p className="flex items-center">
                   <span className="w-20 text-gray-500">Phone:</span>
-                  <a href="tel:0714635258" className="hover:text-green-400 transition-colors">0714635258</a>
+                  <a href="tel:+263786573967" className="hover:text-green-400 transition-colors">0786573967 / 0714635258</a>
                 </p>
                 <p className="flex items-center">
                   <span className="w-20 text-gray-500">Email:</span>
@@ -106,7 +106,7 @@ export default function Footer() {
                 </p>
                 <p className="flex items-center">
                   <span className="w-20 text-gray-500">WhatsApp:</span>
-                  <a href="https://wa.me/263714635258" className="hover:text-green-400 transition-colors">0714635258</a>
+                  <a href="https://wa.me/263786573967" className="hover:text-green-400 transition-colors">0786573967</a>
                 </p>
               </div>
             </div>

@@ -58,8 +58,8 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-4">
             <div className="text-right">
               <p className="text-sm text-slate-600">Call us now</p>
-              <a href="tel:0714635258" className="text-orange-600 font-semibold hover:text-orange-700">
-                0714635258
+              <a href="tel:+263786573967" className="text-orange-600 font-semibold hover:text-orange-700">
+                0786573967 / 0714635258
               </a>
             </div>
             <Link
@@ -134,8 +134,8 @@ export default function Header() {
               </Link>
               <div className="pt-4 border-t border-gray-200">
                 <p className="text-sm text-slate-600 mb-2">Call us now</p>
-                <a href="tel:0714635258" className="text-orange-600 font-semibold hover:text-orange-700 block mb-4">
-                  0714635258
+                <a href="tel:+263786573967" className="text-orange-600 font-semibold hover:text-orange-700 block mb-4">
+                  0786573967 / 0714635258
                 </a>
                 <Link
                   to="/contact"

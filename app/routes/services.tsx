@@ -317,10 +317,10 @@ export default function Services() {
                 Apply for a Loan
               </a>
               <a
-                href="tel:0714635258"
+                href="tel:+263786573967"
                 className="border-2 border-green-500 text-green-500 px-8 py-3 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-colors duration-200"
               >
-                Call Now: 0714635258
+                Call Now: 0786573967 / 0714635258
               </a>
             </div>
           </div>

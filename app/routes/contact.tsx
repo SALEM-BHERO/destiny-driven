@@ -246,7 +246,12 @@ export default function Contact() {
                       </div>
                     </div>
                     <div className="flex items-center pt-2">
-                      <a href="tel:0714635258" className="text-slate-600 hover:text-orange-500 font-medium transition-colors flex items-center">
+                      <a href="tel:+263786573967" className="text-slate-600 hover:text-orange-500 font-medium transition-colors flex items-center">
+                        <span className="mr-3 text-lg">📞</span> 0786573967
+                      </a>
+                    </div>
+                    <div className="flex items-center">
+                      <a href="tel:+263714635258" className="text-slate-600 hover:text-orange-500 font-medium transition-colors flex items-center">
                         <span className="mr-3 text-lg">📞</span> 0714635258
                       </a>
                     </div>
@@ -290,18 +295,25 @@ export default function Contact() {
                   <h3 className="text-xl font-bold mb-6">Quick Contact Options</h3>
                   <div className="space-y-4">
                     <a
-                      href="https://wa.me/263714635258"
+                      href="https://wa.me/263786573967"
                       className="flex items-center justify-center bg-green-600 text-white p-4 rounded-xl hover:bg-green-500 transition-all duration-200 shadow-lg hover:shadow-green-500/25 transform hover:-translate-y-1"
                     >
                       <span className="mr-3 text-xl">💬</span>
-                      <span className="font-bold">WhatsApp Us</span>
+                      <span className="font-bold">WhatsApp: 0786573967</span>
                     </a>
                     <a
-                      href="tel:0714635258"
+                      href="tel:+263786573967"
                       className="flex items-center justify-center bg-orange-500 text-white p-4 rounded-xl hover:bg-orange-400 transition-all duration-200 shadow-lg hover:shadow-orange-500/25 transform hover:-translate-y-1"
                     >
                       <span className="mr-3 text-xl">📞</span>
-                      <span className="font-bold">Call Now</span>
+                      <span className="font-bold">Call: 0786573967</span>
+                    </a>
+                    <a
+                      href="tel:+263714635258"
+                      className="flex items-center justify-center bg-orange-600 text-white p-4 rounded-xl hover:bg-orange-500 transition-all duration-200 shadow-lg hover:shadow-orange-600/25 transform hover:-translate-y-1"
+                    >
+                      <span className="mr-3 text-xl">📞</span>
+                      <span className="font-bold">Call: 0714635258</span>
                     </a>
                     <a
                       href="mailto:destinydrivenf@gmail.com"
@@ -476,10 +488,10 @@ export default function Contact() {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
-                href="tel:0714635258"
+                href="tel:+263786573967"
                 className="bg-orange-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-orange-700 transition-colors duration-200 shadow-lg shadow-orange-500/20"
               >
-                Call Now: 0714635258
+                Call Now: 0786573967 / 0714635258
               </a>
               <a
                 href="/services"
