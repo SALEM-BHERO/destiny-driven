@@ -115,7 +115,7 @@ export default function Contact() {
                         value={formData.firstName}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-shadow outline-none"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-shadow outline-none text-slate-900"
                         placeholder="Your first name"
                       />
                     </div>
@@ -130,7 +130,7 @@ export default function Contact() {
                         value={formData.lastName}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-shadow outline-none"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-shadow outline-none text-slate-900"
                         placeholder="Your last name"
                       />
                     </div>
@@ -147,7 +147,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-shadow outline-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-shadow outline-none text-slate-900"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -163,7 +163,7 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-shadow outline-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-shadow outline-none text-slate-900"
                       placeholder="Your phone number"
                     />
                   </div>
@@ -177,7 +177,7 @@ export default function Contact() {
                       name="loanType"
                       value={formData.loanType}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-shadow outline-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-shadow outline-none text-slate-900 bg-white"
                     >
                       <option value="">Select a loan type</option>
                       <option value="business">Business Loans</option>
@@ -203,7 +203,7 @@ export default function Contact() {
                       onChange={handleChange}
                       rows={4}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-shadow outline-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-shadow outline-none text-slate-900"
                       placeholder="Tell us about your financial needs and how we can help..."
                     ></textarea>
                   </div>
