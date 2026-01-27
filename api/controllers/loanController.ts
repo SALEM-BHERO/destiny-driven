@@ -1,9 +1,10 @@
 import type { Request, Response } from 'express';
-import { 
-  sendLoanApplicationConfirmation, 
-  sendContactConfirmation, 
-  sendAdminLoanNotification, 
-  sendAdminContactNotification 
+import mongoose from 'mongoose';
+import {
+  sendLoanApplicationConfirmation,
+  sendContactConfirmation,
+  sendAdminLoanNotification,
+  sendAdminContactNotification
 } from '../services/emailService';
 import { LoanApplication, ContactMessage } from '../models/databaseModels';
 
@@ -27,6 +28,15 @@ export const submitLoanApplication = async (req: Request, res: Response) => {
       });
     }
 
+    // Check database connection
+    if (mongoose.connection.readyState !== 1) {
+      console.error('Database connection not ready for loan application. State:', mongoose.connection.readyState);
+      return res.status(503).json({
+        success: false,
+        message: 'Our loan application service is temporarily unavailable due to database maintenance. Please contact us directly via phone or WhatsApp.'
+      });
+    }
+
     // Create new loan application
     const newApplication = new LoanApplication({
       firstName,
@@ -40,21 +50,20 @@ export const submitLoanApplication = async (req: Request, res: Response) => {
 
     const savedApplication = await newApplication.save();
 
-    // Send confirmation email
+    // Send confirmation emails (don't block response)
     sendLoanApplicationConfirmation(
       savedApplication.email,
       `${savedApplication.firstName} ${savedApplication.lastName}`,
       savedApplication.loanType,
       savedApplication._id.toString()
-    );
+    ).catch(err => console.error('Error sending loan confirmation email:', err));
 
-    // Notify admin
     sendAdminLoanNotification(
       process.env.ADMIN_EMAIL || 'admin@destinydrivenfinance.com',
       `${savedApplication.firstName} ${savedApplication.lastName}`,
       savedApplication.loanType,
       savedApplication._id.toString()
-    );
+    ).catch(err => console.error('Error sending admin loan notification email:', err));
 
     res.status(201).json({
       success: true,
@@ -89,6 +98,15 @@ export const submitContactMessage = async (req: Request, res: Response) => {
       });
     }
 
+    // Check database connection
+    if (mongoose.connection.readyState !== 1) {
+      console.error('Database connection not ready. State:', mongoose.connection.readyState);
+      return res.status(503).json({
+        success: false,
+        message: 'Our messaging service is temporarily unavailable due to database maintenance. Please contact us directly via phone or WhatsApp.'
+      });
+    }
+
     // Create new contact message
     const newMessage = new ContactMessage({
       firstName,
@@ -100,18 +118,17 @@ export const submitContactMessage = async (req: Request, res: Response) => {
 
     const savedMessage = await newMessage.save();
 
-    // Send confirmation email
+    // Send confirmation emails (don't block response on these)
     sendContactConfirmation(
       savedMessage.email,
       `${savedMessage.firstName} ${savedMessage.lastName}`
-    );
+    ).catch(err => console.error('Error sending contact confirmation email:', err));
 
-    // Notify admin
     sendAdminContactNotification(
       process.env.ADMIN_EMAIL || 'admin@destinydrivenfinance.com',
       `${savedMessage.firstName} ${savedMessage.lastName}`,
       savedMessage.email
-    );
+    ).catch(err => console.error('Error sending admin contact notification email:', err));
 
     res.status(201).json({
       success: true,
@@ -121,7 +138,7 @@ export const submitContactMessage = async (req: Request, res: Response) => {
     console.error('Error submitting contact message:', error);
     res.status(500).json({
       success: false,
-      message: 'Internal server error'
+      message: 'Internal server error while processing your request'
     });
   }
 };
@@ -165,14 +182,14 @@ export const getLoanApplicationById = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     const application = await LoanApplication.findById(id);
-    
+
     if (!application) {
       return res.status(404).json({
         success: false,
         message: 'Loan application not found'
       });
     }
-    
+
     res.status(200).json({
       success: true,
       data: application
@@ -191,20 +208,20 @@ export const updateLoanApplicationStatus = async (req: Request, res: Response) =
   try {
     const { id } = req.params;
     const { status } = req.body;
-    
+
     const application = await LoanApplication.findByIdAndUpdate(
       id,
       { status },
       { new: true }
     );
-    
+
     if (!application) {
       return res.status(404).json({
         success: false,
         message: 'Loan application not found'
       });
     }
-    
+
     res.status(200).json({
       success: true,
       message: 'Loan application status updated',
